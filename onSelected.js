@@ -1,4 +1,4 @@
-angular.module('koganei.onSelected').
+angular.module('koganei.onselected', []).
 directive('onSelected', [function() {
 
     function getSelected() {

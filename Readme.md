@@ -6,6 +6,7 @@ Super easy to implement
 
 Then in your controller
     
+    // loaded module koganei.onselected
     scope.myFunction = function(word, selection) {};
 
 Got the basic selection code from http://stackoverflow.com/a/10180367
