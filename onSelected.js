@@ -5,13 +5,13 @@ directive('onSelected', [function() {
         var text = "";
         if (window.getSelection
         && window.getSelection().toString()
-        && $(window.getSelection()).attr('type') != "Caret") {
+        && angular.element(window.getSelection()).attr('type') != "Caret") {
             text = window.getSelection();
             return text;
         }
         else if (document.getSelection
         && document.getSelection().toString()
-        && $(document.getSelection()).attr('type') != "Caret") {
+        && angular.element(document.getSelection()).attr('type') != "Caret") {
             text = document.getSelection();
             return text;
         }
