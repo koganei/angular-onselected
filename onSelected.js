@@ -39,7 +39,6 @@ directive('onSelected', [function() {
             if(angular.isFunction(scope.onSelected)) {
 
               var selected = getSelected();
-              window.selected = selected;
               scope.onSelected.apply(this, [selected.toString(), selected]);
             }
           });
