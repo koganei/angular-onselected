@@ -1,5 +1,7 @@
 # Angular Directive: onSelected
 
+    bower install koganei/angular-onselected
+
 Super easy to implement
 
     <div on-selected="myFunction"></div>
