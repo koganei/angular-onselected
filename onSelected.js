@@ -1,5 +1,5 @@
 angular.module('koganei.onselected', []).
-directive('onSelected', [function() {
+directive('onSelected', [function() { 
 
     function getSelected() {
         var text = "";
