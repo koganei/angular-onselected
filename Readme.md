@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/koganei/angular-onselected.svg?branch=master)](https://travis-ci.org/koganei/angular-onselected)
 # Angular Directive: onSelected
 
     bower install koganei/angular-onselected
