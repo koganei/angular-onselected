@@ -1,36 +1,32 @@
 angular.module('koganei.onselected', []).
 directive('onSelected', [function() { 
 
-
-    function getSelection(global) {
-        if(global.getSelection
-            && global.getSelection().toString()
-            && angular.element(global.getSelection()).attr('type') != "Caret";) {
-            
-            return global.getSelection();
+    function getSelected() {
+        var text = "";
+        if (window.getSelection
+        && window.getSelection().toString()
+        && angular.element(window.getSelection()).attr('type') != "Caret") {
+            text = window.getSelection();
+            return text;
         }
-        
-        return false;
-    }
-    
-    function getSelectionRange() {
-        var selection = document.selection && document.selection.createRange();
+        else if (document.getSelection
+        && document.getSelection().toString()
+        && angular.element(document.getSelection()).attr('type') != "Caret") {
+            text = document.getSelection();
+            return text;
+        }
+        else {
+            var selection = document.selection && document.selection.createRange();
 
-        if (!(typeof selection === "undefined")
+            if (!(typeof selection === "undefined")
             && selection.text
             && selection.text.toString()) {
-            
-            return selection.text;
+                text = selection.text;
+                return text;
+            }
         }
-        
-        return false;
-    }
 
-    function getSelected() {
-        return getSelection(window) ||
-               getSelection(document) ||
-               getSelectionRange() ||
-               false;
+        return false;
     }
 
     return {
